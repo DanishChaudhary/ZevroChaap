@@ -196,113 +196,100 @@ const Franchise = () => {
         </div>
       </section>
 
-      {/* Benefits Section - ZORKO Style */}
-      <section className="py-20 bg-black">
+      {/* Benefits Section - ZEVRO Style */}
+      <section className="py-20 bg-gradient-to-br from-zevro-maroon-900 via-zevro-maroon-800 to-zevro-maroon-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Why Choose <span className="text-orange-500">ZEVRO</span> Brand ?
+              Why Choose <span className="text-zevro-flame-400">ZEVRO</span> Franchise?
             </h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-zevro-flame-400 mx-auto mb-4"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the perfect blend of healthy food, profitable business, and proven success
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* NO Royalty */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-red-600 rounded-full flex items-center justify-center border-4 border-red-500">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">₹</span>
-                </div>
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zevro-flame-400 to-zevro-flame-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-zevro-flame-400/25 transition-all duration-300">
+                <span className="text-white text-2xl font-bold">₹</span>
               </div>
-              <h3 className="text-orange-500 font-bold text-lg mb-2">NO Royalty</h3>
-              <h4 className="text-orange-500 font-bold text-lg mb-4">NO Profit Sharing</h4>
-              <p className="text-white text-sm">Make only Profits</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">NO Royalty</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">NO Profit Sharing</h4>
+              <p className="text-gray-300 text-sm">Keep 100% of your profits with zero ongoing fees</p>
             </div>
 
             {/* High Quality */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-blue-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">🏭</span>
-                </div>
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zevro-maroon-600 to-zevro-maroon-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-zevro-maroon-600/25 transition-all duration-300">
+                <span className="text-white text-2xl">🏭</span>
               </div>
-              <h3 className="text-blue-400 font-bold text-lg mb-2">High Quality of <span className="text-orange-500">Sauces,</span></h3>
-              <h4 className="text-blue-400 font-bold text-lg mb-4"><span className="text-orange-500">Syrups, Premixes</span> etc.</h4>
-              <p className="text-white text-sm">You get material directly from Manufacturer</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Premium Quality</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Direct Supply</h4>
+              <p className="text-gray-300 text-sm">High-quality sauces, syrups & premixes directly from manufacturer</p>
             </div>
 
             {/* Chef Less Kitchen */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-red-600 rounded-full flex items-center justify-center border-4 border-red-500">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">👨‍🍳</span>
-                </div>
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zevro-flame-500 to-zevro-flame-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-zevro-flame-500/25 transition-all duration-300">
+                <span className="text-white text-2xl">👨‍🍳</span>
               </div>
-              <h3 className="text-red-400 font-bold text-lg mb-2"><span className="text-orange-500">Chef Less</span></h3>
-              <h4 className="text-red-400 font-bold text-lg mb-4"><span className="text-orange-500">Kitchen</span> Model</h4>
-              <p className="text-white text-sm">Chefs, professionals and highly trained staff NOT required</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Chef-Less Kitchen</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Simple Operations</h4>
+              <p className="text-gray-300 text-sm">No need for professional chefs or highly trained staff</p>
             </div>
 
             {/* Low Investment */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-green-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">💰</span>
-                </div>
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-green-500/25 transition-all duration-300">
+                <span className="text-white text-2xl">💰</span>
               </div>
-              <h3 className="text-green-400 font-bold text-lg mb-2">Low <span className="text-orange-500">Investment</span></h3>
-              <h4 className="text-green-400 font-bold text-lg mb-4">High <span className="text-orange-500">Returns</span></h4>
-              <p className="text-white text-sm">Most Easy & Affordable Setup<br/>0% Wastage- Less Inventory, More Dishes with Unique taste</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Low Investment</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">High Returns</h4>
+              <p className="text-gray-300 text-sm">Affordable setup with 0% wastage and maximum profitability</p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* 100% Creative Freedom */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-purple-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">🧠</span>
-                </div>
+            {/* Creative Freedom */}
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
+                <span className="text-white text-2xl">🎨</span>
               </div>
-              <h3 className="text-purple-400 font-bold text-lg mb-2">100%</h3>
-              <h4 className="text-purple-400 font-bold text-lg mb-4"><span className="text-orange-500">Creative Freedom</span></h4>
-              <p className="text-white text-sm">No Restrictions, Design your Cafe as per your Budget & your choice of Interior- Furniture</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Creative Freedom</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Your Business Rules</h4>
+              <p className="text-gray-300 text-sm">Design your menu, pricing & marketing strategies freely</p>
             </div>
 
-            {/* Pocket Friendly Menu */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-orange-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">📱</span>
-                </div>
+            {/* Marketing Support */}
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zevro-flame-400 to-zevro-flame-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-zevro-flame-400/25 transition-all duration-300">
+                <span className="text-white text-2xl">📢</span>
               </div>
-              <h3 className="text-orange-500 font-bold text-lg mb-2"><span className="text-orange-500">Pocket Friendly</span> Menu</h3>
-              <h4 className="text-orange-500 font-bold text-lg mb-4">Menu <span className="text-orange-500">Freedom</span></h4>
-              <p className="text-white text-sm">80+ Variety of Pure Vegetarian Food. Well researched Menu & Recipe.<br/>We give you freedom for menu customization</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Marketing Support</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Complete Branding</h4>
+              <p className="text-gray-300 text-sm">Full branding materials, social media content & promotional strategies</p>
             </div>
 
-            {/* FREE Digital Marketing */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-yellow-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">💻</span>
-                </div>
+            {/* Training & Support */}
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
+                <span className="text-white text-2xl">🎓</span>
               </div>
-              <h3 className="text-yellow-400 font-bold text-lg mb-2">FREE</h3>
-              <h4 className="text-yellow-400 font-bold text-lg mb-4"><span className="text-orange-500">Digital Marketing</span></h4>
-              <p className="text-white text-sm">We run a marketing Campaign for your outlet to reach 2-2.5 Lakh People</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Training & Support</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Ongoing Assistance</h4>
+              <p className="text-gray-300 text-sm">Comprehensive training program & continuous operational support</p>
             </div>
 
-            {/* Tech Enabled System */}
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-6 bg-cyan-600 rounded-full flex items-center justify-center">
-                <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xl">⚙️</span>
-                </div>
+            {/* Quick ROI */}
+            <div className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-zevro-maroon-600 to-zevro-maroon-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-zevro-maroon-600/25 transition-all duration-300">
+                <span className="text-white text-2xl">⚡</span>
               </div>
-              <h3 className="text-cyan-400 font-bold text-lg mb-2"><span className="text-orange-500">Tech Enabled</span> System</h3>
-              <h4 className="text-cyan-400 font-bold text-lg mb-4">End to End <span className="text-orange-500">Support</span></h4>
-              <p className="text-white text-sm">Digital Ordering System, Management, Inventory Etc. with Brand Guidance & Training</p>
+              <h3 className="text-zevro-gold-400 font-bold text-lg mb-2">Quick ROI</h3>
+              <h4 className="text-zevro-gold-400 font-bold text-lg mb-4">Fast Recovery</h4>
+              <p className="text-gray-300 text-sm">Start earning profits within 6-12 months of operation</p>
             </div>
           </div>
         </div>
@@ -345,48 +332,6 @@ const Franchise = () => {
         </div>
       </section>
 
-      {/* Investment Information Section */}
-      <section className="py-20 bg-zevro-maroon-900">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Investment & Returns
-            </h2>
-            <p className="text-xl text-gray-300">
-              Start your profitable ZEVRO franchise with minimal investment and maximum returns
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-gradient-to-br from-green-50 to-green-100">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">💰</span>
-              </div>
-              <h3 className="text-2xl font-bold text-green-800 mb-4">Low Investment</h3>
-              <p className="text-3xl font-bold text-green-600 mb-2">₹2-5 Lakhs</p>
-              <p className="text-gray-700">Complete setup with equipment, training, and initial inventory</p>
-            </Card>
-
-            <Card className="p-8 text-center bg-gradient-to-br from-blue-50 to-blue-100">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">📈</span>
-              </div>
-              <h3 className="text-2xl font-bold text-blue-800 mb-4">High Returns</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-2">25-35%</p>
-              <p className="text-gray-700">Expected ROI within 12-18 months of operation</p>
-            </Card>
-
-            <Card className="p-8 text-center bg-gradient-to-br from-purple-50 to-purple-100">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">⚡</span>
-              </div>
-              <h3 className="text-2xl font-bold text-purple-800 mb-4">Quick Setup</h3>
-              <p className="text-3xl font-bold text-purple-600 mb-2">15-30 Days</p>
-              <p className="text-gray-700">From agreement to grand opening with full support</p>
-            </Card>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

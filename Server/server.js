@@ -14,6 +14,20 @@ dotenv.config({ path: path.join(process.cwd(), '..', '.env') });
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+const url = 'https://zevrochaap.onrender.com';
+const intervalMs = 10 * 60 * 1000; // 10 minutes
+
+function reloadWebsite() {
+    axios.get(url)
+        .then(res => { console.log(new Date().toISOString(), 'ping ok'); })
+        .catch(err => { console.log(new Date().toISOString(), 'ping failed'); });
+}
+
+// ping immediately so user doesn't wait for first interval
+reloadWebsite();
+setInterval(reloadWebsite, intervalMs);
+
 // Security middleware
 app.use(helmet());
 // Minimal logging - only errors
