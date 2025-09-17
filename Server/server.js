@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import morgan from 'morgan';
 import path from 'path';
+import axios from 'axios';
 import contactRoutes from './routes/contact.js';
 import adminRoutes from './routes/admin.js';
 
@@ -13,6 +14,9 @@ dotenv.config({ path: path.join(process.cwd(), '..', '.env') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Trust proxy for deployment platforms like Render, Heroku, etc.
+app.set('trust proxy', 1);
 
 
 const url = 'https://zevrochaap.onrender.com';
