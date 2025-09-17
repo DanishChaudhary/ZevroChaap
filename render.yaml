@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: zevro-restaurant
+    env: node
+    plan: free
+    buildCommand: npm install --production=false && cd Client && npm install --production=false && npm run build && cd ..
+    startCommand: cd Server && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: SITE_BASE_URL
+        sync: false
+      - key: WHATSAPP_NUMBER
+        sync: false
+      - key: WHATSAPP_DEFAULT_MSG
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+    autoDeploy: true
+    branch: main
