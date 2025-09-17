@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 
 const Home = () => {
+  const [whatsappConfig, setWhatsappConfig] = useState({
+    number: '',
+    defaultMessage: ''
+  });
+
+  useEffect(() => {
+    // Fetch WhatsApp configuration from backend
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/contact/config`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          setWhatsappConfig(data.whatsappConfig);
+        }
+      })
+      .catch(err => { /* WhatsApp config fetch failed - silently handled */ });
+  }, []);
+
+  const openWhatsAppForFranchise = () => {
+    const franchiseMessage = "Hi! I'm interested in starting a ZEVRO franchise. Could you please provide me with more details about franchise opportunities, investment requirements, and the application process?";
+    const message = encodeURIComponent(franchiseMessage);
+    const url = `https://wa.me/${whatsappConfig.number.replace(/[^0-9]/g, '')}?text=${message}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zevro-maroon-950 via-zevro-maroon-900 to-zevro-maroon-800">
       {/* Hero Section */}
@@ -48,14 +72,17 @@ const Home = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <Link to="/franchise">
-                <Button variant="primary" size="xl" className="w-full sm:w-auto">
-                  Request Franchise
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Button>
-              </Link>
+              <Button 
+                variant="primary" 
+                size="xl" 
+                className="w-full sm:w-auto"
+                onClick={openWhatsAppForFranchise}
+              >
+                Request Franchise
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Button>
               <Link to="/menu">
                 <Button variant="outline" size="xl" className="w-full sm:w-auto border-zevro-gold-400 text-zevro-gold-400 hover:bg-zevro-gold-400 hover:text-zevro-maroon-900">
                   View Menu
