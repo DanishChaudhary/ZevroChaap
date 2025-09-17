@@ -29,7 +29,7 @@ const Contact = () => {
           setWhatsappConfig(data.whatsappConfig);
         }
       })
-      .catch(err => console.error('Failed to fetch WhatsApp config:', err));
+      .catch(err => { /* WhatsApp config fetch failed - silently handled */ });
   }, []);
 
   const handleInputChange = (e) => {
@@ -124,7 +124,7 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      // Form submission error - handled by user feedback
       setSubmitStatus({
         type: 'error',
         message: 'Network error. Please check your connection and try again.'

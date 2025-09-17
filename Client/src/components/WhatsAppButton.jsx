@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
           setWhatsappConfig(data.whatsappConfig);
         }
       })
-      .catch(err => console.error('Failed to fetch WhatsApp config:', err));
+      .catch(err => { /* WhatsApp config fetch failed - silently handled */ });
   }, []);
 
   const openWhatsApp = () => {
