@@ -24,8 +24,8 @@ const intervalMs = 10 * 60 * 1000; // 10 minutes
 
 function reloadWebsite() {
     axios.get(url)
-        .then(res => { console.log(new Date().toISOString(), 'ping ok'); })
-        .catch(err => { console.log(new Date().toISOString(), 'ping failed'); });
+        .then(res => { console.log('ping ok'); })
+        .catch(err => { console.log('ping failed'); });
 }
 
 // ping immediately so user doesn't wait for first interval
