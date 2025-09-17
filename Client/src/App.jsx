@@ -21,9 +21,9 @@ function App() {
           <Route path="/franchise" element={<Franchise />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
+        <Route path="/admin" element={<Admin />} />
         <WhatsAppButton />
       </div>
     </Router>
