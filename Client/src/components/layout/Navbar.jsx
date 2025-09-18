@@ -75,39 +75,45 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-zevro-maroon-900 rounded-lg mt-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-300 ${
-                    isActive(item.href)
-                      ? 'text-zevro-flame-400 bg-zevro-maroon-800'
-                      : 'text-gray-300 hover:text-zevro-flame-400 hover:bg-zevro-maroon-800'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="px-3 py-2">
-                <Button 
-                  variant="primary"
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    window.location.href = '/franchise';
-                  }}
-                >
-                  Get Franchise
-                </Button>
-              </div>
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-zevro-maroon-900 rounded-lg mt-2 transform transition-all duration-300 ease-in-out">
+            {navigation.map((item, index) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-all duration-300 transform ${
+                  isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+                } ${
+                  isActive(item.href)
+                    ? 'text-zevro-flame-400 bg-zevro-maroon-800'
+                    : 'text-gray-300 hover:text-zevro-flame-400 hover:bg-zevro-maroon-800'
+                }`}
+                style={{ transitionDelay: `${index * 50}ms` }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className={`px-3 py-2 transition-all duration-300 transform ${
+              isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+            style={{ transitionDelay: `${navigation.length * 50}ms` }}>
+              <Button 
+                variant="primary"
+                size="sm" 
+                className="w-full"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.location.href = '/franchise';
+                }}
+              >
+                Get Franchise
+              </Button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

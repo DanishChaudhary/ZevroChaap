@@ -79,48 +79,6 @@ const Franchise = () => {
     }
   };
 
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      price: '$25,000',
-      features: [
-        'Basic franchise package',
-        'Training for 2 staff members',
-        'Marketing materials',
-        'Initial inventory support',
-        '6 months support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$45,000',
-      features: [
-        'Complete franchise package',
-        'Training for 5 staff members',
-        'Premium marketing materials',
-        'Full inventory support',
-        '12 months support',
-        'Territory protection'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$75,000',
-      features: [
-        'Multi-location package',
-        'Unlimited staff training',
-        'Custom marketing campaigns',
-        'Priority inventory support',
-        '24 months support',
-        'Exclusive territory rights',
-        'Business development support'
-      ],
-      popular: false
-    }
-  ];
-
   const steps = [
     {
       number: '01',
@@ -185,9 +143,13 @@ const Franchise = () => {
               Join the plant-based revolution and build a profitable business with our proven franchise system.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="lg" onClick={() => document.getElementById('franchise-form').scrollIntoView()}>
+              <Link to="/contact">
+              <Button variant="primary" size="lg" 
+              className="w-full sm:w-auto"
+              >
                 Request Information
               </Button>
+              </Link>
               <Button variant="outline" size="lg" className="border-zevro-gold-400 text-zevro-gold-400 hover:bg-zevro-gold-400 hover:text-zevro-maroon-900">
                 Download Brochure
               </Button>
@@ -308,7 +270,7 @@ const Franchise = () => {
             {[
               {
                 question: "What is the total investment required?",
-                answer: "The total investment ranges from $25,000 to $75,000 depending on the package you choose, including franchise fee, equipment, and initial inventory."
+                answer: "The total investment ranges from 250,000 to 275,000 depending on the package you choose, including franchise fee, equipment, and initial inventory."
               },
               {
                 question: "How long is the franchise agreement?",

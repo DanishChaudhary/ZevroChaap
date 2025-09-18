@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Allow all web crawlers access to all content
+Disallow: /admin
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /src/
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
