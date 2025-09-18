@@ -168,10 +168,10 @@ const Terms = () => {
           <div className="text-center mt-12">
             <Link to="/">
               <Button variant="primary" size="lg">
+                Back to Home
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18m-9-9l9 9-9 9" />
                 </svg>
-                Back to Home
               </Button>
             </Link>
           </div>
