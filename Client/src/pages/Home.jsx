@@ -43,9 +43,9 @@ const Home = () => {
           <div className="text-center">
             {/* Logo */}
             <div className="mb-8 animate-fade-in-up">
-              <img 
+              <img
                 src={new URL('../assets/logo.png', import.meta.url).href}
-                alt="ZEVRO - Healthy Bite Pure Soya" 
+                alt="ZEVRO - Healthy Bite Pure Soya"
                 className="mx-auto h-32 md:h-40 lg:h-48 w-auto drop-shadow-2xl"
               />
             </div>
@@ -62,27 +62,26 @@ const Home = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-zevro-flame-400 mb-4 bg-gradient-to-r from-zevro-flame-400 to-zevro-gold-400 bg-clip-text text-transparent">
                 🔥 Zevro – Scaling India’s Biggest Chaap Franchise Brand
               </h2>
-             
+
             </div>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.6s' }}>
-              Transform your entrepreneurial dreams into reality with India's most trusted chaap franchise. 
+              Transform your entrepreneurial dreams into reality with India's most trusted chaap franchise.
               <span className="text-zevro-gold-400 font-semibold"> Join 500+ successful franchisees</span> and be part of the plant-based food revolution.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <Button 
-                variant="primary" 
-                size="xl" 
+              <Link to="/franchise">
+                <Button variant="primary" size="lg"
                 className="w-full sm:w-auto"
-                onClick={openWhatsAppForFranchise}
-              >
-                Request Franchise
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Button>
+                >
+                  Get Started Today
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Button>
+              </Link>
               <Link to="/menu">
                 <Button variant="outline" size="xl" className="w-full sm:w-auto border-zevro-gold-400 text-zevro-gold-400 hover:bg-zevro-gold-400 hover:text-zevro-maroon-900">
                   View Menu
@@ -164,20 +163,20 @@ const Home = () => {
               </h3>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  Founded in 2020, ZEVRO emerged from a simple yet powerful vision: to make healthy, 
-                  sustainable food accessible to everyone. Our journey began when our founder, 
-                  a nutrition enthusiast and environmental advocate, recognized the growing need 
+                  Founded in 2020, ZEVRO emerged from a simple yet powerful vision: to make healthy,
+                  sustainable food accessible to everyone. Our journey began when our founder,
+                  a nutrition enthusiast and environmental advocate, recognized the growing need
                   for plant-based alternatives that don't compromise on taste or quality.
                 </p>
                 <p>
-                  Starting with a small team of food scientists and culinary experts, we dedicated 
-                  ourselves to perfecting the art of soya-based food production. Through countless 
-                  hours of research, testing, and refinement, we developed our signature products 
+                  Starting with a small team of food scientists and culinary experts, we dedicated
+                  ourselves to perfecting the art of soya-based food production. Through countless
+                  hours of research, testing, and refinement, we developed our signature products
                   that have now become favorites among health-conscious consumers.
                 </p>
                 <p>
-                  Today, ZEVRO stands as a testament to innovation in the plant-based food industry, 
-                  with a growing network of franchise partners who share our commitment to health, 
+                  Today, ZEVRO stands as a testament to innovation in the plant-based food industry,
+                  with a growing network of franchise partners who share our commitment to health,
                   sustainability, and excellence.
                 </p>
               </div>
@@ -190,8 +189,8 @@ const Home = () => {
                   </div>
                   <h4 className="text-2xl font-bold text-white mb-4">Our Mission</h4>
                   <p className="text-gray-300">
-                    To provide delicious, nutritious, and sustainable plant-based food solutions 
-                    that promote health and environmental well-being while building a community 
+                    To provide delicious, nutritious, and sustainable plant-based food solutions
+                    that promote health and environmental well-being while building a community
                     of conscious consumers and successful franchise partners.
                   </p>
                 </div>
@@ -210,14 +209,17 @@ const Home = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join our growing network of successful franchise partners and bring healthy eating to your community.
           </p>
-          <Link to="/franchise">
-            <Button variant="secondary" size="lg">
-              Get Started Today
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Button>
-          </Link>
+          <Button
+            variant="secondary"
+            size="xl"
+            className="w-full sm:w-auto"
+            onClick={openWhatsAppForFranchise}
+          >
+            Request Franchise
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Button>
         </div>
       </section>
     </div>
