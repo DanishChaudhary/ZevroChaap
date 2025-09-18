@@ -24,7 +24,7 @@ const Privacy = () => {
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
           <div className="text-sm text-gray-400 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Last updated: January 2024
+            Last updated: September 2025
           </div>
         </div>
       </section>
@@ -137,14 +137,14 @@ const Privacy = () => {
                   <svg className="w-5 h-5 text-zevro-flame-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 9876543210</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <svg className="w-5 h-5 text-zevro-flame-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span>123 Health Street, Wellness City, WC 12345</span>
+                  <span>Bijnor</span>
                 </div>
               </div>
             </Card>
@@ -154,10 +154,10 @@ const Privacy = () => {
           <div className="text-center mt-12">
             <Link to="/">
               <Button variant="primary" size="lg">
-                Back to Home
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18m-9-9l9 9-9 9" />
                 </svg>
+                Back to Home
               </Button>
             </Link>
           </div>
